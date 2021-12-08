@@ -26,6 +26,7 @@ export default function SinglePost() {
     getPost();
   }, [path]);
 
+
   const handleDelete = async () => {
     try {
       await axiosInstance.delete(`/posts/${post._id}`, {
@@ -46,6 +47,7 @@ export default function SinglePost() {
       setUpdateMode(false);
     } catch (error) {}
   };
+
 
   return (
     <div className="singlePost">
